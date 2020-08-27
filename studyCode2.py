@@ -1,5 +1,10 @@
 import requests
-
+# requests 모듈에 대해 알았다. (배우진 않았다.)
+# while문의 활용
+# strip() 의 사용법과 약간의 응용법을 터득했다.
+# try, catch문을 활용했다.
+# 반복문에 대해 조금은 더 안 것 같다.
+# is 와 == 의 차이점에 대해 학습할 것이다. (is 는 객체가 같을 때 True, ==는 값이 같을 때 True)
 while True :
   urlResult = input("Please write a URL or URLs you want to check. (seperated by comma)\n").split(",") 
 
