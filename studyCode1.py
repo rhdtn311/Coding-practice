@@ -10,10 +10,10 @@ def add_to_dict(dic = {}, key = "", value = "") :
         print("You need to send a dictionary. You sent : <class 'str'>")
     elif value is ""  :
         print("You need to send a word and a definition.")
-    elif key in dic.keys() : 
+    elif key in dic :       # 처음 이 부분은 key in dic.keys() 로 했는데 굳이 그럴 필요 없이 key in dic 으로 하는게 더 단순하고 깔끔했다.
         print(f"{key} is already on the dictionary. Won't add.")
     else :
-        dic[key] = value
+        dic[key] = value      
         print(f"{key} has been added")
 
 def get_from_dict(dic = {}, key = "") : 
@@ -21,7 +21,7 @@ def get_from_dict(dic = {}, key = "") :
         print("You need to send a dictionary. You sent : < class 'str'> " )
     elif key is "" :
         print("You need to send a word to search for.")
-    elif key not in dic.keys() : 
+    elif key not in dic : 
         print(f"{key} was not found in this dict.")
     else :
         print(f"{key} :" + dic[key])
@@ -31,7 +31,7 @@ def update_word(dic = {}, key = "", value = "") :
         print("You need to send a dictionary. You sent : <class 'str'>")
     elif value is "" : 
         print("You need to send a word and a definition to update.")
-    elif key not in dic.keys() : 
+    elif key not in dic : 
         print(f"{key} is not on the dict. Can't update non-existing word.")
     else : 
         dic[key] = value
@@ -42,7 +42,7 @@ def delete_from_dict(dic = {}, key = "") :
         print("You need to send a dictionary. You sent : <class 'str'>")
     elif key is "" : 
         print("You need to specify a word to delete.")
-    elif key not in dic.keys() :
+    elif key not in dic :
         print("{0} is not in this dict. Won't delete.".format(key))
     else :
         del dic[key] 
