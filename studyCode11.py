@@ -1,3 +1,5 @@
+# 코드업 1283번
+
 money = int(input())
 first_money = money
 day = int(input())
@@ -13,9 +15,9 @@ for j in array :
 result = round(money-first_money,0)
 print(int(result))
 
-if int(result) > first_money : 
+if int(result) > 0 : 
     print("good")
-elif int(result) == first_money :
+elif int(result) == 0 :
     print("same")
 elif int(result) < 0 : 
     print("bad")
